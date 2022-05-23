@@ -3,12 +3,15 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def Movie_Name(request):
+def index(request):
     message = "...."
     x = 'HELLO'
-    page = request.GET.get('page') or 33
-    return render(request, "base.html", {'x': x, 'page': page})
+    return render(request, "base.html", {'x': x})
 
+def Movie_Search(request):
+    message = "...."
+    search = request.GET.get('search') or 33
+    return render(request, "base.html", { 'search': search})
 
 def about(request):
     return render(request, "about.html")

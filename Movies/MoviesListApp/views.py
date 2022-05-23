@@ -3,6 +3,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-def Movie_Name(request):
+def index(request):
     message = "...."
     return render(request, "base.html")

@@ -5,5 +5,5 @@ def index(request):
     return  render(request,'base.html')
 
 def search(request):
-    name = request.GET.get('name') or 'Search'
+    name = request.GET.get('name') or 'None'
     return render(request, 'search.html', {'name': name})
